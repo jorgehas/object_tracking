@@ -10,4 +10,5 @@ $ sudo apt install python3-lxml pyqt5-dev-tools cmake$ make qt5py3$ python3 la
 ### 2.2 Training phase
 ```
 python3 object_detection/train.py \    --logtostderr \    --pipeline_config_path=/raid/georges_data/models-master/object_detection/samples/configs/ ssd_inception_v2_coco.config \    --train_dir=/raid/georges_data/models-master/slim/coco_inceptionv2```### 2.3 Exporting the inference graph ```
-CHECKPOINT_NUMBER=60000python3 export_inference_graph.py     --input_type image_tensor     --pipeline_config_path /home/georges/models-master/object_detection/sampleconfigs/ssd_inception_v2_coco.config     --trained_checkpoint_prefix   /home/georges/models-master/object_detection/model.ckpt-${CHECKPOINT_NUMBER}   --output_directory /home/georges/models-master/object_detection/ output_inference_graph.pb```
+CHECKPOINT_NUMBER=60000python3 export_inference_graph.py --input_type image_tensor --pipeline_config_path /home/georges/models-master/object_detection/sampleconfigs/ssd_inception_v2_coco.config --trained_checkpoint_prefix   /home/georges/models-master/object_detection/model.ckpt-${CHECKPOINT_NUMBER} --output_directory /home/georges/models-master/object_detection/ output_inference_graph.pb
+```
