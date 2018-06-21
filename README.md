@@ -1,7 +1,7 @@
 ## TRAINING MAHJONG IMAGES FOR OBJECTS LABEL TRACKING USING SSD ALGORITHM 
 # Table of Contents
-1. [Architecture] (#Architecture)
-2. [Preparing the image dataset](#Preparing the image dataset)
+1. [Architecture](#Architecture)
+2. [Preparing the image dataset](#Training)
 3. [Training the images with SSD-inceptionv2 model](#Training)
 3. [Run detection and recognition on image](#third-example)
 
