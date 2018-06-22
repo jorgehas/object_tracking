@@ -11,7 +11,9 @@
  ## 2- Preparing the image dataset
 
 ***DATASET***### 2.1 Saving image from a video file
-A video recording of mahjong dices was performed. To save image frames, the following python script was used:```python3 save_frame.py```### 2.2 Image renaming#### Use the following command to rename the images contained in the dataset```find . -name '*.jpg' | gawk 'BEGIN{ a=1 }{ printf "mv \"%s\" %04d.jpg\n", $0, a++ }' | bash```### 2.3 Images annotation and labeling   using LabelImg toolhttps://github.com/tzutalin/labelImg***For python 3.5***```
+A video recording of mahjong dices was performed. To save image frames, the following python script was used:```python3 save_frame.py```### 2.2 Image renaming#### Use the following command to rename the images contained in the dataset
+```
+find . -name '*.jpg' | gawk 'BEGIN{ a=1 }{ printf "mv \"%s\" %04d.jpg\n", $0, a++ }' | bash```### 2.3 Images annotation and labeling   using LabelImg toolhttps://github.com/tzutalin/labelImg***For python 3.5***```
 $ sudo apt install python3-lxml pyqt5-dev-tools cmake$ make qt5py3$ python3 labelImg.py```### 3- Training the images with SSD-inceptionv2 model### 3.1 Create tensorflow record```python3 create_pascal_tf_record.py \    --label_map_path=~/object_detection/data/mscoco_label_map.pbtxt \    --data_dir=~/slim/VOCdevkit/ --year=VOC2007 --set=train \    --output_path=mscoco_train.record```
 ### 3.2 Training phase
 ```
@@ -22,12 +24,11 @@ CHECKPOINT_NUMBER=60000python3 export_inference_graph.py --input_type image_ten
 ### 4- Run detection and recognition on image
 ```
 $ python3 ssd_coco_detection.py
-
 ```
 ### Result
 
  <p align="center">
-  <img src="Result.png" width="600" title="Github Logo">
+  <img src="Result.png" width="700" title="Github Logo">
 </p>
 
 
