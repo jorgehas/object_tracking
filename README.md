@@ -26,7 +26,10 @@ $ python3 ssd_coco_detection.py
 ```
 ### Result
 
-![](Result.png)
+ <p align="center">
+  <img src="Result.png" width="256" title="Github Logo">
+</p>
+
 
 
 
