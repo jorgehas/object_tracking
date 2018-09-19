@@ -1,4 +1,4 @@
-## TRAINING MAHJONG IMAGES FOR OBJECTS LABEL TRACKING USING SINGLE SHOT MULTIBOX DETECTOR (SSD) ALGORITHM 
+## This program trains SSD (Single Shot Multibox Detector algorithm on mahjong images for objects markers detection and tracking
 
 # Table of Contents
 1. [Architecture](#Architecture)
