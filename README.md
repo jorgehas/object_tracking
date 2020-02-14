@@ -1,4 +1,4 @@
-### This program trains SSD (Single Shot Multibox Detector algorithm on mahjong images for markers detection and tracking
+### This program trains SSD (Single Shot Multibox Detector)algorithm on mahjong images for markers detection and tracking
 
 ### Table of Contents
 1. [Architecture](#Architecture)
